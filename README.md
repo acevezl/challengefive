@@ -44,7 +44,7 @@ function paintDay() {
 ```
 The rendered header will now look like this:
 ![Header Image](./assets/images/Work_Day_Scheduler.png)
-Now we want to select the day block element, which will contains all the time blocks (hours) for our users to enter their calendar events. Since jQuery pulls an array of objects, and we only have one object, we can simply do the following to pick up the one and only *#day-block* element:
+Now we want to select the day block element, which will contain all the time blocks (hours) for our users to enter their calendar events. Since jQuery pulls an array of objects, and we only have one object, we can simply do the following to pick up the one and only *#day-block* element:
 ```
     ...
     var dayBlock = $('#day-block')[0];
@@ -52,7 +52,7 @@ Now we want to select the day block element, which will contains all the time bl
 ```
 I'm using a *for* cycle to paint 24 time blocks (one per hour of the day) in the screen. Starting at 0hrs and finishing at 23hrs.
 
-Inside the *for* loop, I'm crating four elements:
+Inside the *for* loop, I'm creating four elements:
 * A &lt;div&gt; element to wrap the time-block elements: hour, description, and save button.
 * A &lt;div&gt; element to display the hour
 * A &lt;textarea&gt; element to allow users to enter the event description and save it
