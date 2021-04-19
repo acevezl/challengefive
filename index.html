@@ -19,6 +19,9 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <!-- Import Open Iconic styles-->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
     <!-- Import styles css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
@@ -28,19 +31,23 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <p id="current-date" class="lead"></p>
     </header>
-    <div class="container">
+    <div class="container" id="day-block">
         <!-- Each row is a time block of 1 HR -->
-        <div class="row timeblock" id="task-block-01">
-            <div class="col-1">Hour here</div>
-            <div class="col-10">Task here</div>
-            <div class="col-1">Save button here</div>
-        </div>
+        <!-- 
+        <div class="row time-block" block-hr-id="0">
+            
+            <div class="col-1 hour">12 AM</div>
+            <textarea class="col-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus praesentium velit numquam magnam possimus libero animi eligendi aspernatur rerum dolorum accusantium iure, perferendis explicabo inventore neque laboriosam laudantium in. Cupiditate.</textarea>
+            <button class="col-1 saveBtn oi oi-pencil"></button>
+            
+        </div>-->
     </div>
 
     <!-- Import JQ and Moment.js libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

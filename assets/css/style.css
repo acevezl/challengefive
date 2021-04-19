@@ -1,3 +1,7 @@
+* {
+  box-sizing:border-box;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -8,17 +12,27 @@ textarea{
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
-  border-left: 1px solid black;
+  color: #545454;
+  border-left: 2px solid black;
   padding: 10px;
+}
+
+textarea:focus {
+  outline: 1px solid #545454;
 }
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  box-shadow: 0 0 10px 0 black;
+  background-color: #fff;
 }
 
 .description{
@@ -26,20 +40,23 @@ textarea{
 }
 
 .time-block{
-  text-align: center;
-  border-radius: 15px;
+  text-align: left;
+  width: 100%;
 }
 
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  border-top: 1px solid white;
+  flex-wrap: nowrap;
 }
 
 .hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
+  background-color: #fafafa;
+  color: #545454;
+  border-top: 1px dashed #545454;
+  padding: 10px;
+  font-size: 14px;
 }
 
 .past {
@@ -58,14 +75,52 @@ textarea{
 }
 
 .saveBtn {
-  border-left: 1px solid black;
+  border: none;
+  border-left: 2px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
+  padding:0;
+  top:0;
 }
 
-.saveBtn i:hover {
-  font-size: 20px;
+.saveBtn:hover {
+  font-size: 24px;
   transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+.saveBtn:focus {
+  outline:none;
+}
+
+.container {
+  width: auto;
+}
+
+@media (max-width: 375px) {
+  .container{
+    width: 375px;
+  }
+  .jumbotron {
+    width: 375px;
+  }
+  .hour {
+    font-size: 9px;
+  }
+}
+@media (max-width: 576px) {
+  .display-3 {
+    font-size: 3.5rem;
+  }
+  .hour {
+    font-size:12px;
+  }
+  .saveBtn {
+    font-size:12px;
+  }
+  .saveBtn:hover {
+    font-size:16px;
+  }
 }
